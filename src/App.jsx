@@ -18,7 +18,7 @@ function App() {
       </header>
       <div className="container">
         <h1>Grading Exams</h1>
-        <p>Grading students based on their Exam rasults.</p>
+        <p>Grading students based on their Exam results.</p>
         <br />
         <Article></Article>
       </div>
