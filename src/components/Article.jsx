@@ -6,8 +6,8 @@ const Article = () => {
 
   const [subject, setSubject] = useState('')
   // const [score, setScore] = useState('')
-  const [forms, setForm] = useState([<SubjectForm key={0} subject={subject} />])
-  const [currentStatus, setCurrentStatus] = useState(false)
+  const [forms, setForm] = useState([<SubjectForm key={0} subject={subject} currentStatus={false} />])
+  // const [currentStatus, setCurrentStatus] = useState(false)
   // test duplicating component with useState
   // const [amounts, setAmount] = useState([<Material key={0} />])
 
@@ -24,10 +24,10 @@ const Article = () => {
   }, [setSubject]);
 
   const handleAddSubject = useCallback((e) => {
-    setCurrentStatus(true)
+    // setCurrentStatus(true)
     e.preventDefault()
     if (subject.length > 0) {
-      setForm([...forms, <SubjectForm key={forms.length} subject={subject} currentStatus={currentStatus} />])
+      setForm([...forms, <SubjectForm key={forms.length} subject={subject} currentStatus={true} />])
     } else {
       console.log("Subject not inserted")
     }
@@ -62,7 +62,7 @@ const Article = () => {
         Add New Score Form
       </Button>
       */}
-      <AddSubjectButton inputSubject={inputSubject} handleAddSubject={handleAddSubject} subject={subject} currentStatus={currentStatus} />
+      <AddSubjectButton inputSubject={inputSubject} handleAddSubject={handleAddSubject} subject={subject} />
       <br />
       {forms}
       <br />

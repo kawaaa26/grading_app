@@ -35,7 +35,7 @@ const SubjectForm = (props) => {
     )
   } else {
     return (
-      <p>Score will be shown HERE.</p>
+      <p>Score will be shown below.</p>
     )
   }
 }
