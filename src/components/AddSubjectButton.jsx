@@ -1,5 +1,4 @@
-import React, { useState, useCallback } from 'react';
-import { SubjectForm } from './index';
+import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
@@ -15,7 +14,7 @@ const AddSubjectButton = (props) => {
         InputLabelProps={{ style: {color: 'white'}}}
       />
       <br />
-      <Button variant="contained" color="primary" onClick={props.handleAddSubject}>{props.subject.length > 0 ? `Add Subject: ${props.subject}` : "Add Subject"}</Button>
+      <Button variant="contained" color={props.subject.length > 0 ? "success" : "warning"} onClick={props.handleAddSubject}>{props.subject.length > 0 ? `Add Subject: ${props.subject}` : "Add Subject"}</Button>
     </div>
   )
 }
