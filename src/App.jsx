@@ -1,4 +1,4 @@
-import {Article} from "./components/index";
+import {Article, Main} from "./components/index";
 // import {Main} from "./components/index";
 import './App.css';
 
@@ -23,6 +23,11 @@ function App() {
         <br />
         {/* <Main /> */}
         <Article />
+        <br />
+        <p>----------------------------------------------------</p>
+        <br />
+        <br />
+        <Main />
       </div>
     </div>
   );
