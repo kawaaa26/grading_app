@@ -1,12 +1,13 @@
 import React, { useState, useCallback } from "react";
-import { SubjectForm, AddSubjectButton, Material } from './index';
+// import { ScoreField, InsertSubjectField, Material } from './index';
+import { ScoreField, InsertSubjectField, Material } from './index';
 import Button from '@mui/material/Button';
 
 const Article = () => {
 
   const [subject, setSubject] = useState('')
   // const [score, setScore] = useState('')
-  const [forms, setForm] = useState([<SubjectForm key={0} subject={subject} currentStatus={false} />])
+  const [forms, setForm] = useState([<ScoreField key={0} subject={subject} currentStatus={false} />])
   // const [currentStatus, setCurrentStatus] = useState(false)
   // test duplicating component with useState
   // const [amounts, setAmount] = useState([<Material key={0} />])
@@ -27,18 +28,18 @@ const Article = () => {
     // setCurrentStatus(true)
     e.preventDefault()
     if (subject.length > 0) {
-      setForm([...forms, <SubjectForm key={forms.length} subject={subject} currentStatus={true} />])
+      setForm([...forms, <ScoreField key={forms.length} subject={subject} currentStatus={true} />])
     } else {
       console.log("Subject not inserted")
     }
-    // setForm([...forms, <SubjectForm key={forms.length} subject={subject} score={score} inputScore={inputScore} />])
+    // setForm([...forms, <ScoreField key={forms.length} subject={subject} score={score} inputScore={inputScore} />])
     // [...forms] => スプレッド構文を使用して、現段階でのforms配列を展開する。
-    // それにより、forms配列内の既存の値 + 末尾に追加された<SubjectForm />となる。
+    // それにより、forms配列内の既存の値 + 末尾に追加された<ScoreField />となる。
   }, [subject])
 
   // const handleAddSubject = (event) => {
   //   event.preventDefault()
-  //   setForm([...forms, <SubjectForm key={forms.length} score={score}  />])
+  //   setForm([...forms, <ScoreField key={forms.length} score={score}  />])
   // }
 
   // const handleAddMaterial = (e) => {
@@ -56,13 +57,13 @@ const Article = () => {
       {/*
       <p>Display Contents for Article Component Here.</p>
       <p>Subject 1</p>
-      <SubjectForm inputScore={inputScore} subject={subject} score={score} />
+      <ScoreField inputScore={inputScore} subject={subject} score={score} />
       <br />
       <Button onClick={handleAddSubject}>
         Add New Score Form
       </Button>
       */}
-      <AddSubjectButton inputSubject={inputSubject} handleAddSubject={handleAddSubject} subject={subject} />
+      <InsertSubjectField inputSubject={inputSubject} handleAddSubject={handleAddSubject} subject={subject} />
       <br />
       {forms}
       <br />
