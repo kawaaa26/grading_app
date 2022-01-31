@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubjectForm, InsertSubjectButton } from './index';
+import { SubjectForm, InsertSubjectButton } from '../index';
 
 const InsertSubjectField = (props) => {
   return (
