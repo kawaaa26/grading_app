@@ -1,5 +1,5 @@
-import {Article, Main} from "./components/index";
-// import {Main} from "./components/index";
+// import {Article, Main} from "./components/index";
+import {Main} from "./components/index";
 import './App.css';
 
 function App() {
@@ -21,13 +21,14 @@ function App() {
         <h1>Grading Exams</h1>
         <p>Grading students based on their Exam results.</p>
         <br />
-        {/* <Main /> */}
-        <Article />
+        <Main />
+        {/* <Article />
         <br />
         <p>----------------------------------------------------</p>
         <br />
         <br />
         <Main />
+        */}
       </div>
     </div>
   );
