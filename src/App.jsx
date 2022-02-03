@@ -1,4 +1,3 @@
-// import {Article, Main} from "./components/index";
 import {Main} from "./components/index";
 import './App.css';
 
@@ -22,13 +21,6 @@ function App() {
         <p>Grading students based on their Exam results.</p>
         <br />
         <Main />
-        {/* <Article />
-        <br />
-        <p>----------------------------------------------------</p>
-        <br />
-        <br />
-        <Main />
-        */}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { ScoreField, InsertSubjectField } from './index';
+import { SubjectField, ScoreField } from './index';
 
 const Main = () => {
   const [subject, setSubject] = useState('')
@@ -20,7 +20,7 @@ const Main = () => {
 
   return (
     <div className='content'>
-      <InsertSubjectField
+      <SubjectField
         inputSubject={inputSubject}
         handleInsertSubject={handleInsertSubject}
         subject={subject}
