@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-const InsertSubjectButton = (props) => {
+const SubjectButton = (props) => {
   return (
     <div>
       <Button
@@ -15,4 +15,4 @@ const InsertSubjectButton = (props) => {
   )
 }
 
-export default InsertSubjectButton;
+export default SubjectButton;
